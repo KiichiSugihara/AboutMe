@@ -46,6 +46,8 @@
         android:textAlignment="center"
         android:visibility="gone"
         android:text=""
+        android:background="@color/colorAccent"
+        android:paddingBottom="@dimen/small_padding"
         />
 
     <ImageView
