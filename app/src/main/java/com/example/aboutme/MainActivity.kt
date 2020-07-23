@@ -14,6 +14,9 @@ class MainActivity : AppCompatActivity() {
         findViewById<Button>(R.id.done_button).setOnClickListener {
             addNickname(it)
         }
+        findViewById<TextView>(R.id.nickname_text).setOnClickListener {
+            updateNickname(it)
+        }
     }
     private fun addNickname(view: View) {
         val editText = findViewById<EditText>(R.id.nickname_edit)
@@ -22,5 +25,12 @@ class MainActivity : AppCompatActivity() {
         editText.visibility = View.GONE
         view.visibility = View.GONE
         nicknameTextView.visibility = View.VISIBLE
+    }
+    private fun updateNickname (view: View) {
+        val editText = findViewById<EditText>(R.id.nickname_edit)
+        val doneButton = findViewById<Button>(R.id.done_button)
+        editText.visibility = View.VISIBLE
+        doneButton.visibility = View.VISIBLE
+        view.visibility = View.GONE
     }
 }
